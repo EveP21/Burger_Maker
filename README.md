@@ -1,65 +1,48 @@
-﻿# Burger Maker
+# Burger Maker
 
-Juego en Python con Pygame donde controlas el pan inferior de una hamburguesa y debes atrapar los ingredientes correctos de cada orden.
+Juego en Python con Pygame donde controlas el pan inferior de una hamburguesa y atrapas los ingredientes correctos de cada orden.
 
 ## Instalar dependencias
 
 ```powershell
+python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-Ejecutar juego
+```
+
+## Ejecutar
+
+```powershell
 python main.py
-Correr auditoría express
-python -m py_compile main.py settings.py assets.py recipe.py audio.pypython tests\smoke_test.py
-Controles
+```
 
+## Validar
 
-Flecha izquierda: mover a la izquierda
+```powershell
+python -m py_compile main.py settings.py assets.py recipe.py audio.py tests\smoke_test.py
+python tests\smoke_test.py
+```
 
+## Controles
 
-Flecha derecha: mover a la derecha
+- Flecha izquierda / A: mover a la izquierda
+- Flecha derecha / D: mover a la derecha
+- P: pausar
+- R: reiniciar
+- ESC: salir
 
+## Assets
 
-P: pausar
+El juego busca sprites en:
 
+```text
+assets/sprites/background.png
+assets/sprites/pan_abajo.png
+assets/sprites/pan_arriba.png
+assets/sprites/carne.png
+assets/sprites/lechuga.png
+assets/sprites/tomate.png
+assets/sprites/queso.png
+assets/sprites/tocino.png
+```
 
-R: reiniciar cuando pierdes
-
-
-Reglas
-
-
-Atrapa solo los ingredientes pedidos en la receta.
-
-
-Si atrapas un ingrediente incorrecto o excluido, pierdes una vida.
-
-
-Si se te pasa cualquier objeto que cae, pierdes una vida.
-
-
-Cuando completes la receta, atrapa el pan superior.
-
-
-Si atrapas el pan superior antes de completar la receta, pierdes una vida.
-
-
-Si se te pasa el pan superior, pierdes una vida.
-
-
-Tienes 3 vidas.
-
-
-Cada nivel aumenta la dificultad.
-
-
-El juego sube de nivel infinitamente.
-
-
-Variables principales
-score = 0ingredients = 0lives = 3
-Assets esperados
-Sprites:
-assets/imagenes/background.pngassets/imagenes/pan_abajo.pngassets/imagenes/pan_arriba.pngassets/imagenes/carne.pngassets/imagenes/lechuga.pngassets/imagenes/tomate.pngassets/imagenes/queso.pngassets/imagenes/tocino.png
-Música:
-assets/music/background.mp3
-El juego funciona aunque no existan los archivos, usando dibujos simples como respaldo.
+Si faltan sprites o alguno está corrupto, el juego usa dibujos generados como respaldo. Por eso esta versión sí corre aunque todavía falten sprites finales.

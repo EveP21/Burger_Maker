@@ -1,5 +1,24 @@
+﻿# Python
 __pycache__/
-*.pyc
-.DS_Store
-.env
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
 .venv/
+venv/
+env/
+
+# Pygame / local
+*.log
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build
+build/
+dist/
+*.egg-info/
