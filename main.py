@@ -1,4 +1,4 @@
-import pygame
+﻿import pygame
 from settings import *
 
 score = START_SCORE
@@ -23,3 +23,4 @@ while running:
    pygame.display.flip()
 
 pygame.quit()
+
